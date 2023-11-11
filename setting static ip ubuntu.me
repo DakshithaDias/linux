@@ -1,0 +1,22 @@
+to set a static IP go to 
+
+cd /etc/netplan
+edit file "01-network-manager-all.yaml"
+Include below
+
+###############
+
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+   enp0s3:
+    dhcp4: no
+    addresses: [192.168.56.30/24]
+    gateway4: 192.168.56.1
+
+
+
+
+#####################
