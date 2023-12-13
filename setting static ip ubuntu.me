@@ -6,15 +6,16 @@ Include below
 
 ###############
 
-# Let NetworkManager manage all devices on this system
 network:
   version: 2
   renderer: NetworkManager
   ethernets:
-   enp0s3:
-    dhcp4: no
-    addresses: [192.168.56.30/24]
-    gateway4: 192.168.56.1
+    enp0s3:
+      dhcp4: no
+      addresses: [192.168.56.21/24]
+      routes:
+        - to: default
+          via: 192.168.56.1
 
 
 
