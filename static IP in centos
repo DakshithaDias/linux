@@ -8,9 +8,10 @@ DEVICE=enp0s3
 ONBOOT=yes
 IPADDR=192.168.1.100    # Replace with your desired IP address
 NETMASK=255.255.255.0   # Replace with the appropriate netmask
-GATEWAY=192.168.1.1    # Replace with your gateway IP address
 DNS1=8.8.8.8           # (Optional) Set your primary DNS server
 DNS2=8.8.4.4           # (Optional) Set your secondary DNS server
+
+#DO NOT CONFIGURE GATEWAY FOT THIS HOSTONLY NETWORK INTERFACE IN CENTOS 
 
 
 sudo systemctl restart network
